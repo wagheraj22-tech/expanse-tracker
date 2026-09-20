@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div>
+                <h1>Expense Tracker</h1>
+                <p>Manage your money smartly</p>
+            </div>
+
+            <button class="add-btn" onclick="openForm()">
+                + Add Transaction
+            </button>
+        </header>
+
+
+        <!-- Summary Cards -->
+        <section class="summary">
+
+            <div class="card balance">
+                <p>Total Balance</p>
+                <h2 id="balance">₹0</h2>
+            </div>
+
+            <div class="card income">
+                <p>Total Income</p>
+                <h2 id="income">₹0</h2>
+            </div>
+
+            <div class="card expense">
+                <p>Total Expense</p>
+                <h2 id="expense">₹0</h2>
+            </div>
+
+        </section>
+
+
+        <!-- Add Transaction Form -->
+        <section class="form-section" id="formSection">
+
+            <h2>Add Transaction</h2>
+
+            <form id="transactionForm">
+
+                <input
+                    type="text"
+                    id="description"
+                    placeholder="Transaction name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Amount"
+                    required
+                >
+
+                <select id="type">
+                    <option value="expense">Expense</option>
+                    <option value="income">Income</option>
+                </select>
+
+                <select id="category">
+                    <option value="Food">Food</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Education">Education</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <input
+                    type="date"
+                    id="date"
+                    required
+                >
+
+                <div class="form-buttons">
+                    <button type="submit" class="save-btn">
+                        Save Transaction
+                    </button>
+
+                    <button
+                        type="button"
+                        class="cancel-btn"
+                        onclick="closeForm()"
+                    >
+                        Cancel
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- Transactions -->
+        <section class="transactions">
+
+            <div class="section-heading">
+                <h2>Recent Transactions</h2>
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search transaction..."
+                >
+            </div>
+
+            <div id="transactionList">
+
+                <p class="empty">
+                    No transactions yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
